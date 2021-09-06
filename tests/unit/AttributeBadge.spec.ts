@@ -4,7 +4,7 @@ import AttributeStars from '../../src/components/AttributeBadge.vue';
 describe('AttributeBadge', () => {
   it ("renders props.type props.rating when passed", () => {
     let type = "text";
-    const rating = 80;
+    const rating = 90;
     const textGrade = "sehr gut";
     const numberGrade = 1;
 
@@ -17,6 +17,6 @@ describe('AttributeBadge', () => {
     type = "number";
     wrapper.setProps({type});
 
-    expect(wrapper.text()).toContain(numberGrade);
+    expect(wrapper.text()).toContain(numberGrade.toString());
   })
 });
